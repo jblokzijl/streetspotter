@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacybeleid — StreetSpotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0f11;
+      --surface: #17191d;
+      --border: #2a2d33;
+      --accent: #f5a623;
+      --accent-dim: rgba(245,166,35,0.12);
+      --text: #e8e9eb;
+      --muted: #7a7f8a;
+      --radius: 12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* Top bar */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .app-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    header span {
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 1px;
+    }
+
+    /* Layout */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .hero {
+      margin-bottom: 48px;
+    }
+
+    .hero h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.6rem;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .updated {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    /* Summary cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 56px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 44px;
+    }
+
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      color: #bbbfc8;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      color: #bbbfc8;
+      font-size: 0.95rem;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '→';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 0.85rem;
+    }
+
+    .highlight-box {
+      background: var(--accent-dim);
+      border: 1px solid rgba(245,166,35,0.25);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+      color: #d4a843;
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    .contact-block p {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-block a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">🚗</div>
+  <div>
+    <h1>StreetSpotter</h1>
+    <span>Speur zeldzame auto's in Nederland</span>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="updated">Privacybeleid</div>
+    <h2>Jouw privacy,<br>onze verantwoordelijkheid</h2>
+    <p>Laatst bijgewerkt: april 2026</p>
+  </div>
+
+  <div class="summary-grid">
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>Geen eigen servers</h3>
+      <p>Alle gegevens blijven op jouw apparaat. Wij hebben geen servers.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🚫</div>
+      <h3>Geen tracking</h3>
+      <p>Geen analytics, geen advertenties, geen cookies.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏛️</div>
+      <h3>Openbare data</h3>
+      <p>Voertuigdata komt van de RDW Open Data API — een publieke overheidsbron.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Welke gegevens gebruikt de app?</h2>
+    <p>StreetSpotter verwerkt zo min mogelijk gegevens. Hieronder staat exact wat de app gebruikt en waarom.</p>
+
+    <ul>
+      <li><strong>Kentekens</strong> — als je een kenteken opzoekt, stuurt de app dit rechtstreeks naar de RDW Open Data API. Het kenteken wordt niet opgeslagen door ons, want we hebben geen servers.</li>
+      <li><strong>Locatie</strong> — als je toestemming geeft, slaat de app op waar je een auto hebt gespot. Dit wordt uitsluitend lokaal op jouw apparaat bewaard. Locatie wordt nooit op de achtergrond bijgehouden.</li>
+      <li><strong>Foto's</strong> — foto's die je maakt van gespotte auto's worden lokaal opgeslagen. Ze worden niet geüpload of gedeeld, tenzij jij zelf kiest een spotkaart te delen.</li>
+      <li><strong>Camera</strong> — de camera wordt gebruikt voor kentekenscan (OCR) en het fotograferen van auto's. Toegang is optioneel en vereist jouw expliciete toestemming.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Worden mijn gegevens gedeeld?</h2>
+
+    <div class="highlight-box">
+      Nee. Alle gegevens blijven op jouw apparaat. De enige externe communicatie is met de RDW Open Data API om voertuiggegevens op te halen. Dit is een openbare overheids-API zonder authenticatie of account.
+    </div>
+
+    <p>StreetSpotter bevat geen advertentienetwerken, analysediensten van derden of andere externe koppelingen die persoonsgegevens ontvangen.</p>
+  </section>
+
+  <section>
+    <h2>Persoonsgegevens van voertuigeigenaren</h2>
+    <p>StreetSpotter toont uitsluitend openbare voertuiggegevens: merk, model, kleur en bouwjaar. De RDW Open Data API verstrekt geen persoonsgegevens van voertuigeigenaren. Er worden geen namen, adressen of andere identificerende gegevens verwerkt of weergegeven.</p>
+  </section>
+
+  <section>
+    <h2>Abonnementen</h2>
+    <p>StreetSpotter Pro is een optioneel maandelijks abonnement dat verloopt via Apple's betaalsysteem. Betalingsgegevens worden verwerkt door Apple en zijn nooit zichtbaar voor ons. We ontvangen alleen een bevestiging dat een abonnement actief is.</p>
+    <p>Abonnementbeheer verloopt via jouw Apple ID-instellingen. Je kunt je abonnement op elk moment opzeggen via Instellingen → Apple ID → Abonnementen.</p>
+  </section>
+
+  <section>
+    <h2>Beveiliging</h2>
+    <p>Omdat alle gegevens lokaal op jouw apparaat worden opgeslagen, zijn ze beschermd door de beveiligingsmaatregelen van iOS zelf, waaronder versleuteling van het bestandssysteem en de beveiliging van de Secure Enclave.</p>
+  </section>
+
+  <section>
+    <h2>Wijzigingen in dit beleid</h2>
+    <p>Als dit privacybeleid wordt gewijzigd, publiceren we de nieuwe versie op deze pagina met een bijgewerkte datum. Bij ingrijpende wijzigingen word je geïnformeerd via de app.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Heb je vragen over dit privacybeleid of over hoe StreetSpotter omgaat met jouw gegevens?</p>
+    <div class="contact-block">
+      <p>Neem contact op via:</p>
+      <p><a href="mailto:info@streetspotter.nl">info@streetspotter.nl</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 StreetSpotter &nbsp;·&nbsp; Gemaakt in Nederland
+</footer>
+
+</body>
+</html>
