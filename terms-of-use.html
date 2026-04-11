@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gebruiksvoorwaarden — StreetSpotter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e0f11;
+      --surface: #17191d;
+      --border: #2a2d33;
+      --accent: #f5a623;
+      --accent-dim: rgba(245,166,35,0.12);
+      --text: #e8e9eb;
+      --muted: #7a7f8a;
+      --radius: 12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .app-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    header span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    .hero {
+      padding: 48px 0 40px;
+    }
+
+    .updated {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      color: #bbbfc8;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      color: #bbbfc8;
+      font-size: 0.95rem;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '→';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 0.85rem;
+    }
+
+    .highlight-box {
+      background: var(--accent-dim);
+      border: 1px solid rgba(245,166,35,0.25);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+      color: #d4a843;
+      line-height: 1.6;
+    }
+
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    .contact-block p {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-block a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">🚗</div>
+  <div>
+    <h1>StreetSpotter</h1>
+    <span>Speur zeldzame auto's in Nederland</span>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="updated">Gebruiksvoorwaarden</div>
+    <h2>Eerlijk spotten,<br>eerlijke regels</h2>
+    <p>Laatst bijgewerkt: april 2026</p>
+  </div>
+
+  <div class="summary-grid">
+    <div class="card">
+      <div class="card-icon">✅</div>
+      <h3>Eerlijk gebruik</h3>
+      <p>Gebruik de app zoals bedoeld: om auto's te spotten en te verzamelen.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <h3>Flexibel abonnement</h3>
+      <p>Pro is maandelijks opzegbaar via je Apple ID-instellingen.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏛️</div>
+      <h3>Openbare data</h3>
+      <p>Voertuiggegevens komen van de RDW — een publieke overheidsbron.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>1. Algemeen</h2>
+    <p>Deze gebruiksvoorwaarden ("Voorwaarden") zijn van toepassing op het gebruik van de mobiele applicatie StreetSpotter ("de App"). Door de App te downloaden, te installeren of te gebruiken, ga je akkoord met deze Voorwaarden.</p>
+    <p>De App wordt aangeboden door de ontwikkelaar van StreetSpotter ("wij", "ons"). Wij behouden het recht om deze Voorwaarden op elk moment te wijzigen. Wijzigingen worden op deze pagina gepubliceerd met een bijgewerkte datum. Bij ingrijpende wijzigingen word je via de App geïnformeerd.</p>
+  </section>
+
+  <section>
+    <h2>2. Aanvaardbaar gebruik</h2>
+    <p>De App is bedoeld voor het spotten, registreren en verzamelen van voertuigen in Nederland op basis van openbare RDW-data. Je stemt ermee in de App uitsluitend te gebruiken voor dit beoogde doel en in overeenstemming met alle toepasselijke wet- en regelgeving.</p>
+    <p>Het is niet toegestaan om:</p>
+    <ul>
+      <li>De App te gebruiken op een manier die de werking ervan verstoort of overbelast.</li>
+      <li>De App of onderdelen ervan te reverse-engineeren, decompileren of demonteren.</li>
+      <li>De App te gebruiken voor commerciële doeleinden zonder onze voorafgaande schriftelijke toestemming.</li>
+      <li>Geautomatiseerde systemen of scripts te gebruiken om de App of de RDW API via de App te benaderen.</li>
+      <li>De App te gebruiken om personen te volgen, te stalken of hun privacy te schenden.</li>
+    </ul>
+    <p>Je bent zelf verantwoordelijk voor het naleven van lokale verkeersregels en veiligheidsvoorschriften wanneer je de App gebruikt. Gebruik de App niet tijdens het autorijden.</p>
+  </section>
+
+  <section>
+    <h2>3. Intellectueel eigendom</h2>
+    <p>Alle intellectuele eigendomsrechten met betrekking tot de App — inclusief maar niet beperkt tot het ontwerp, de code, afbeeldingen, pictogrammen, animaties en teksten — berusten bij de ontwikkelaar van StreetSpotter.</p>
+    <p>De voertuiggegevens die in de App worden weergegeven, zijn afkomstig van de RDW Open Data API en vallen onder het publicatiebeleid van de RDW (Rijksdienst voor het Wegverkeer).</p>
+    <p>Foto's die je maakt met de App blijven jouw eigendom. Door een foto te maken en op te slaan in de App verleen je ons geen rechten op die foto's.</p>
+  </section>
+
+  <section>
+    <h2>4. Abonnement — StreetSpotter Pro</h2>
+    <p>De App biedt een optioneel abonnement: <strong>StreetSpotter Pro</strong>. Dit is een automatisch verlengend maandabonnement dat toegang geeft tot aanvullende functies, waaronder onbeperkt spots per dag.</p>
+
+    <div class="highlight-box">
+      <strong>Abonnementsgegevens:</strong><br>
+      → Naam: StreetSpotter Pro<br>
+      → Prijs: € 2,99 per maand<br>
+      → Duur: maandelijks, automatisch verlengend<br>
+      → Betaling: via je Apple ID-account
+    </div>
+
+    <p>Bij bevestiging van de aankoop wordt het bedrag in rekening gebracht op je Apple ID-account. Het abonnement wordt automatisch verlengd tenzij je het ten minste 24 uur vóór het einde van de lopende periode opzegt.</p>
+    <p>Het bedrag voor de verlenging wordt binnen 24 uur vóór het einde van de lopende periode in rekening gebracht. Na aankoop kun je het abonnement beheren en automatische verlenging uitschakelen via je apparaatinstellingen onder <strong>Instellingen → Apple ID → Abonnementen</strong>.</p>
+    <p>Een eventueel ongebruikt deel van een gratis proefperiode vervalt zodra een betaald abonnement wordt geactiveerd, indien van toepassing.</p>
+    <p>Betalingen worden verwerkt door Apple. Wij hebben geen toegang tot je betaalgegevens.</p>
+  </section>
+
+  <section>
+    <h2>5. Beschikbaarheid en gegevens</h2>
+    <p>De App maakt gebruik van de RDW Open Data API, een openbare dienst van de Nederlandse overheid. Wij garanderen niet dat deze dienst te allen tijde beschikbaar of correct is. De voertuiggegevens worden aangeboden zoals beschikbaar ("as is") en wij zijn niet verantwoordelijk voor onvolledige, verouderde of onjuiste data van de RDW.</p>
+    <p>Wij behouden het recht om de App op elk moment te wijzigen, bij te werken of (tijdelijk) buiten werking te stellen, zonder voorafgaande kennisgeving.</p>
+  </section>
+
+  <section>
+    <h2>6. Beperking van aansprakelijkheid</h2>
+    <p>De App wordt aangeboden "zoals deze is" ("as is") zonder enige garantie, expliciet of impliciet. Voor zover wettelijk toegestaan zijn wij niet aansprakelijk voor:</p>
+    <ul>
+      <li>Directe of indirecte schade voortvloeiend uit het gebruik of het niet kunnen gebruiken van de App.</li>
+      <li>Verlies van gegevens, spots, foto's of andere door jou opgeslagen informatie op je apparaat.</li>
+      <li>Onjuiste of onvolledige voertuiggegevens verkregen via de RDW API.</li>
+      <li>Schade als gevolg van ongeautoriseerde toegang tot of wijziging van jouw gegevens op je apparaat.</li>
+    </ul>
+    <p>Onze totale aansprakelijkheid is in alle gevallen beperkt tot het bedrag dat je in de voorgaande 12 maanden voor het abonnement hebt betaald.</p>
+  </section>
+
+  <section>
+    <h2>7. Beëindiging</h2>
+    <p>Je kunt het gebruik van de App op elk moment beëindigen door de App van je apparaat te verwijderen. Als je een actief abonnement hebt, dien je dit apart op te zeggen via <strong>Instellingen → Apple ID → Abonnementen</strong> om verdere facturering te voorkomen.</p>
+    <p>Wij behouden het recht om je toegang tot de App op te schorten of te beëindigen als je in strijd handelt met deze Voorwaarden of de App misbruikt.</p>
+    <p>Bij beëindiging vervallen alle rechten die onder deze Voorwaarden aan jou zijn verleend. Lokaal opgeslagen gegevens (spots, foto's) blijven op je apparaat totdat je ze zelf verwijdert of de App deïnstalleert.</p>
+  </section>
+
+  <section>
+    <h2>8. Privacy</h2>
+    <p>Ons privacybeleid is een integraal onderdeel van deze Voorwaarden. Lees ons <a href="index.html">Privacybeleid</a> om te begrijpen hoe de App omgaat met jouw gegevens.</p>
+  </section>
+
+  <section>
+    <h2>9. Toepasselijk recht</h2>
+    <p>Op deze Voorwaarden is Nederlands recht van toepassing. Eventuele geschillen die voortvloeien uit of verband houden met deze Voorwaarden worden voorgelegd aan de bevoegde rechter in Nederland.</p>
+  </section>
+
+  <section>
+    <h2>10. Apple-voorwaarden</h2>
+    <p>Deze Voorwaarden vormen een aanvulling op de standaard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Licensed Application End User License Agreement (EULA)</a>. In geval van strijdigheid prevaleren de voorwaarden van Apple.</p>
+    <p>Apple is geen partij bij deze Voorwaarden en draagt geen verantwoordelijkheid voor de App of de inhoud ervan.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Heb je vragen over deze gebruiksvoorwaarden?</p>
+    <div class="contact-block">
+      <p>Neem contact op via:</p>
+      <p><a href="mailto:info@streetspotter.nl">info@streetspotter.nl</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 StreetSpotter &nbsp;·&nbsp; Gemaakt in Nederland
+</footer>
+
+</body>
+</html>
